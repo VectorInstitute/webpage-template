@@ -5,6 +5,8 @@ import { Box, Container, Flex, Heading, Text, Image, VStack, Link } from '@chakr
 import NextLink from 'next/link';
 import Header from '../components/header';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const About: React.FC = () => {
   return (
     <Box minHeight="100vh">
@@ -25,7 +27,7 @@ const About: React.FC = () => {
             <Flex gap={8} alignItems="center" flexWrap="wrap" justifyContent="center">
               <Link as={NextLink} href="https://vectorinstitute.ai" isExternal>
                 <Image
-                  src="/images/vector-logo.png"
+                  src={`${basePath}/images/vector-logo.png`}
                   alt="Vector Institute"
                   width={150}
                   height={40}

@@ -6,6 +6,8 @@ import NextLink from 'next/link'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/navigation'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const NavLinks: React.FC = memo(() => (
   <>
     <Link as={NextLink} href="/about" color="white" fontWeight="semibold">
@@ -38,7 +40,7 @@ const Header: React.FC = () => {
             onClick={handleLogoClick}
           >
             <Image
-              src="/images/vector-logo.png"
+              src={`${basePath}/images/vector-logo.png`}
               alt="Vector Institute"
               objectFit="contain"
               width="100%"

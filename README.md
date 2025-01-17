@@ -1,2 +1,3 @@
 # webpage-template
-A simple static website that adheres to Vector branding guidelines using NextJS
+
+A simple static website that adheres to Vector branding guidelines using Next.js
